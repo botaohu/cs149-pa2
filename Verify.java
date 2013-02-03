@@ -26,7 +26,7 @@ public class Verify {
     // constructor parses the parameters
     public Verify(final String[] args) {
         try {
-            implementations.add(new CoarseLockTreap().getClass().getConstructor());
+            implementations.add(new STMTreapNested().getClass().getConstructor());
         } catch (NoSuchMethodException e) {
             exitUsage();
         }
