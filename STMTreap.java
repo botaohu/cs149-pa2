@@ -3,7 +3,7 @@
 import org.deuce.Atomic;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class STMTreap implements IntSet {
+public class STMTreapNested implements IntSet {
     static class Node {
         final int key;
         final int priority;
@@ -45,6 +45,7 @@ public class STMTreap implements IntSet {
         }
     }
 
+    @Atomic 
     private Node addImpl(final Node node, final int key) {
         if (node == null) {
             return new Node(key, randPriority());
@@ -88,6 +89,7 @@ public class STMTreap implements IntSet {
         }
     }
 
+    @Atomic
     private Node rotateRight(final Node node) {
         //       node                  nL
         //     /      \             /      \
@@ -100,6 +102,7 @@ public class STMTreap implements IntSet {
         return nL;
     }
 
+    @Atomic
     private Node rotateLeft(final Node node) {
         final Node nR = node.right;
         node.right = nR.left;
@@ -115,6 +118,7 @@ public class STMTreap implements IntSet {
         }
     }
 
+    @Atomic
     private Node removeImpl(final Node node, final int key) {
         if (node == null) {
             // not present, nothing to do
