@@ -1,0 +1,107 @@
+java -javaagent:deuceAgent-1.2.0.jar -cp . Main --key-range=1000000 --read-pct=0
+
+LSA
+ 1 threads,  CoarseLockTreap, range 1000000, 0% read:    931494 operations/sec
+ 2 threads,  CoarseLockTreap, range 1000000, 0% read:    392897 operations/sec
+ 4 threads,  CoarseLockTreap, range 1000000, 0% read:    405047 operations/sec
+ 8 threads,  CoarseLockTreap, range 1000000, 0% read:    424132 operations/sec
+16 threads,  CoarseLockTreap, range 1000000, 0% read:    410466 operations/sec
+ 1 threads, STMTreapNoNested, range 1000000, 0% read:    211118 operations/sec
+ 2 threads, STMTreapNoNested, range 1000000, 0% read:    426391 operations/sec
+ 4 threads, STMTreapNoNested, range 1000000, 0% read:    816231 operations/sec
+ 8 threads, STMTreapNoNested, range 1000000, 0% read:   1608634 operations/sec
+16 threads, STMTreapNoNested, range 1000000, 0% read:   1356447 operations/sec
+ 1 threads,         STMTreap, range 1000000, 0% read:    237603 operations/sec
+ 2 threads,         STMTreap, range 1000000, 0% read:    450499 operations/sec
+ 4 threads,         STMTreap, range 1000000, 0% read:    879002 operations/sec
+ 8 threads,         STMTreap, range 1000000, 0% read:   1613667 operations/sec
+16 threads,         STMTreap, range 1000000, 0% read:   1428688 operations/sec
+
+TL2
+ 1 threads,  CoarseLockTreap, range 1000000, 0% read:    905692 operations/sec
+ 2 threads,  CoarseLockTreap, range 1000000, 0% read:    401065 operations/sec
+ 4 threads,  CoarseLockTreap, range 1000000, 0% read:    432567 operations/sec
+ 8 threads,  CoarseLockTreap, range 1000000, 0% read:    425110 operations/sec
+16 threads,  CoarseLockTreap, range 1000000, 0% read:    425689 operations/sec
+ 1 threads, STMTreapNoNested, range 1000000, 0% read:    207177 operations/sec
+ 2 threads, STMTreapNoNested, range 1000000, 0% read:    388728 operations/sec
+ 4 threads, STMTreapNoNested, range 1000000, 0% read:    779416 operations/sec
+ 8 threads, STMTreapNoNested, range 1000000, 0% read:   1474366 operations/sec
+16 threads, STMTreapNoNested, range 1000000, 0% read:   1430076 operations/sec
+ 1 threads,         STMTreap, range 1000000, 0% read:    220153 operations/sec
+ 2 threads,         STMTreap, range 1000000, 0% read:    410025 operations/sec
+ 4 threads,         STMTreap, range 1000000, 0% read:    760251 operations/sec
+ 8 threads,         STMTreap, range 1000000, 0% read:   1379434 operations/sec
+16 threads,         STMTreap, range 1000000, 0% read:   1400818 operations/sec
+
+java -javaagent:deuceAgent-1.2.0.jar -cp . Main --key-range=10000 --read-pct=95
+
+LSA
+ 1 threads,  CoarseLockTreap, range 10000, 95% read:   4278433 operations/sec
+ 2 threads,  CoarseLockTreap, range 10000, 95% read:   1561002 operations/sec
+ 4 threads,  CoarseLockTreap, range 10000, 95% read:   2094627 operations/sec
+ 8 threads,  CoarseLockTreap, range 10000, 95% read:   1907682 operations/sec
+16 threads,  CoarseLockTreap, range 10000, 95% read:   1892091 operations/sec
+ 1 threads, STMTreapNoNested, range 10000, 95% read:   1140469 operations/sec
+ 2 threads, STMTreapNoNested, range 10000, 95% read:   1743185 operations/sec
+ 4 threads, STMTreapNoNested, range 10000, 95% read:   2757324 operations/sec
+ 8 threads, STMTreapNoNested, range 10000, 95% read:   6415047 operations/sec
+16 threads, STMTreapNoNested, range 10000, 95% read:   4829308 operations/sec
+ 1 threads,         STMTreap, range 10000, 95% read:   1170199 operations/sec
+ 2 threads,         STMTreap, range 10000, 95% read:   2094967 operations/sec
+ 4 threads,         STMTreap, range 10000, 95% read:   3826341 operations/sec
+ 8 threads,         STMTreap, range 10000, 95% read:   7463925 operations/sec
+16 threads,         STMTreap, range 10000, 95% read:   5135474 operations/sec
+
+TL2
+ 1 threads,  CoarseLockTreap, range 10000, 95% read:   4328019 operations/sec
+ 2 threads,  CoarseLockTreap, range 10000, 95% read:   1625182 operations/sec
+ 4 threads,  CoarseLockTreap, range 10000, 95% read:   2088149 operations/sec
+ 8 threads,  CoarseLockTreap, range 10000, 95% read:   1997779 operations/sec
+16 threads,  CoarseLockTreap, range 10000, 95% read:   1960335 operations/sec
+ 1 threads, STMTreapNoNested, range 10000, 95% read:    944382 operations/sec
+ 2 threads, STMTreapNoNested, range 10000, 95% read:   1797265 operations/sec
+ 4 threads, STMTreapNoNested, range 10000, 95% read:   3156751 operations/sec
+ 8 threads, STMTreapNoNested, range 10000, 95% read:   4259204 operations/sec
+16 threads, STMTreapNoNested, range 10000, 95% read:   5631977 operations/sec
+ 1 threads,         STMTreap, range 10000, 95% read:    928090 operations/sec
+ 2 threads,         STMTreap, range 10000, 95% read:   1792750 operations/sec
+ 4 threads,         STMTreap, range 10000, 95% read:   2363331 operations/sec
+ 8 threads,         STMTreap, range 10000, 95% read:   5160566 operations/sec
+16 threads,         STMTreap, range 10000, 95% read:   6043495 operations/sec
+
+java -javaagent:deuceAgent-1.2.0.jar -cp . Main --key-range=1000 --read-pct=99
+
+LSA
+ 1 threads,  CoarseLockTreap, range 1000, 99% read:   7208519 operations/sec
+ 2 threads,  CoarseLockTreap, range 1000, 99% read:   2620529 operations/sec
+ 4 threads,  CoarseLockTreap, range 1000, 99% read:   4049128 operations/sec
+ 8 threads,  CoarseLockTreap, range 1000, 99% read:   3912724 operations/sec
+16 threads,  CoarseLockTreap, range 1000, 99% read:   3915454 operations/sec
+ 1 threads, STMTreapNoNested, range 1000, 99% read:   1981964 operations/sec
+ 2 threads, STMTreapNoNested, range 1000, 99% read:   3276842 operations/sec
+ 4 threads, STMTreapNoNested, range 1000, 99% read:   5342014 operations/sec
+ 8 threads, STMTreapNoNested, range 1000, 99% read:   9608086 operations/sec
+16 threads, STMTreapNoNested, range 1000, 99% read:  10724746 operations/sec
+ 1 threads,         STMTreap, range 1000, 99% read:   1832373 operations/sec
+ 2 threads,         STMTreap, range 1000, 99% read:   3398499 operations/sec
+ 4 threads,         STMTreap, range 1000, 99% read:   4879615 operations/sec
+ 8 threads,         STMTreap, range 1000, 99% read:   9366331 operations/sec
+16 threads,         STMTreap, range 1000, 99% read:  10452694 operations/sec
+
+TL2
+ 1 threads,  CoarseLockTreap, range 1000, 99% read:   7209123 operations/sec
+ 2 threads,  CoarseLockTreap, range 1000, 99% read:   2658116 operations/sec
+ 4 threads,  CoarseLockTreap, range 1000, 99% read:   4042483 operations/sec
+ 8 threads,  CoarseLockTreap, range 1000, 99% read:   3894843 operations/sec
+16 threads,  CoarseLockTreap, range 1000, 99% read:   3909991 operations/sec
+ 1 threads, STMTreapNoNested, range 1000, 99% read:   1554669 operations/sec
+ 2 threads, STMTreapNoNested, range 1000, 99% read:   2948667 operations/sec
+ 4 threads, STMTreapNoNested, range 1000, 99% read:   5846470 operations/sec
+ 8 threads, STMTreapNoNested, range 1000, 99% read:  11873871 operations/sec
+16 threads, STMTreapNoNested, range 1000, 99% read:  10048608 operations/sec
+ 1 threads,         STMTreap, range 1000, 99% read:   1525623 operations/sec
+ 2 threads,         STMTreap, range 1000, 99% read:   2752895 operations/sec
+ 4 threads,         STMTreap, range 1000, 99% read:   5898323 operations/sec
+ 8 threads,         STMTreap, range 1000, 99% read:   8965617 operations/sec
+16 threads,         STMTreap, range 1000, 99% read:  10320043 operations/sec
